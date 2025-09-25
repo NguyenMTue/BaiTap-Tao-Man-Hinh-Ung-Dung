@@ -21,16 +21,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498">
 
-        <!--        &lt;!&ndash; Hình minh họa &ndash;&gt;-->
-        <!--        <ImageView-->
-        <!--            android:id="@+id/imgIllustration"-->
-        <!--            android:layout_width="200dp"-->
-        <!--            android:layout_height="200dp"-->
-        <!--            android:src="@mipmap/ic_launcher"-->
-        <!--            android:contentDescription="Illustration"-->
-        <!--            android:layout_marginBottom="16dp"/>-->
+                <!-- Hình minh họa -->
+                <ImageView
+                    android:id="@+id/imgIllustration"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:contentDescription="Illustration"
+                    android:layout_marginBottom="16dp"/>
 
-        <!-- Tiêu đề -->
+         Tiêu đề
         <TextView
             android:id="@+id/txtLoginTitle"
             android:layout_width="wrap_content"
