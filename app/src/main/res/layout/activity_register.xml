@@ -9,98 +9,132 @@
     android:background="@android:color/white"
     tools:context=".Register">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal"
+    <!-- ScrollView giúp cuộn trên màn hình nhỏ -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Hình minh họa -->
-        <ImageView
-            android:id="@+id/imgIllustration"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="Illustration"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Tiêu đề -->
-        <TextView
-            android:id="@+id/txtSignUpTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Full Name -->
-        <EditText
-            android:id="@+id/edtFullName"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="12dp"/>
+            android:padding="24dp">
 
-        <!-- Email -->
-        <EditText
-            android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Your Email"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="12dp"/>
+            <!-- Hình minh họa -->
+            <ImageView
+                android:id="@+id/imgIllustration"
+                android:layout_width="245dp"
+                android:layout_height="207dp"
+                android:contentDescription="Illustration"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Password -->
-        <EditText
-            android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="12dp"/>
+            <!-- Tiêu đề -->
+            <TextView
+                android:id="@+id/txtSignUpTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/imgIllustration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"/>
 
-        <!-- Confirm Password -->
-        <EditText
-            android:id="@+id/edtConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="8dp"/>
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/edtFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toBottomOf="@id/txtSignUpTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="12dp"/>
 
-        <!-- Checkbox hiển thị mật khẩu -->
-        <CheckBox
-            android:id="@+id/chkShowPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hiển thị mật khẩu"
-            android:layout_marginBottom="16dp"/>
+            <!-- Email -->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Your Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@id/edtFullName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="12dp"/>
 
-        <!-- Nút Login -->
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:backgroundTint="#E6D8F6"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="16dp"/>
+            <!-- Password -->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/edtEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="12dp"/>
 
-        <!-- Sign In link -->
-        <TextView
-            android:id="@+id/txtSignIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Do you have an account? Sign In"
-            android:textSize="14sp"
-            android:layout_marginTop="8dp"/>
-    </LinearLayout>
+            <!-- Confirm Password -->
+            <EditText
+                android:id="@+id/edtConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/edtPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Checkbox hiển thị mật khẩu -->
+            <CheckBox
+                android:id="@+id/chkShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hiển thị mật khẩu"
+                app:layout_constraintTop_toBottomOf="@id/edtConfirmPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Nút Sign Up -->
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:backgroundTint="#E6D8F6"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/chkShowPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Sign In link -->
+            <TextView
+                android:id="@+id/txtSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have an account? Sign In"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/btnSignUp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
